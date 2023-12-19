@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>病院検索ページ</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      /* ヘッダーのスタイル */
+      header {
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        text-align: left;
+      }
+      header a {
+        text-decoration: none;
+        color: #2fb8ee;
+        font-size: 1em;
+      }
+      #map {
+        font-size: small;
+        height: 500px;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 1.5em;
+      }
+      #search-input,
+      button {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+        padding: 15px;
+        font-size: 1em;
+      }
+      button {
+        background-color: #87ceeb;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      button:hover {
+        background-color: #add8e6;
+      }
+      .place {
+        margin: 10px;
+        padding: 4px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .place p {
+        margin: 8px;
+      }
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.2em;
+        }
+        #search-input,
+        button {
+          padding: 12px;
+          font-size: 0.9em;
+        }
+      }
+    </style>
+    <script src="place.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=***REMOVED***&callback=initMap"
+    ></script>
+    <script>
+      window.onload = function () {
+        displayPlaces();
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="first.html">&larr; 戻る</a>
+    </header>
+    <main>
+      <div id="map"></div>
+      <h1 id="midasi">近くの病院を検索</h1>
+      <input type="text" id="search-input" placeholder="任意の検索" />
+      <button onclick="redirectToSearch()">検索</button>
+      <div id="places"></div>
+    </main>
+  </body>
+</html>

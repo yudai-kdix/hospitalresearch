@@ -10,7 +10,7 @@
 自機に落として使う際はまずmy-express-appフォルダ内に.envファイルを用意し、OPENAI_API_KEYとGOOGLE_PLACES_API_KEYに任意のkeyを設定してください。
 次にnode-moduleの環境を整え、my-express-appの中でnode back.jsを実行してください。Server running on port 3000と表示が出ていれば大丈夫です。
 
-すると親ファイル内のfirst.htmlにアクセスすれば使えるようになっているはずです。
+するとnewフォルダ内のfirst.htmlにアクセスすれば使えるようになっているはずです。
 
 first.htmlでは症状から病院を検索する機能と病院の種類をタップして検索する機能があります。
 症状から検索する機能はchatGPTを経由して検索しているので常識の範囲内でなんでも入力して頂いて大丈夫です(ex.喉が痛い、恋人に振られた 等)
